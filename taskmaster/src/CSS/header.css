@@ -1,0 +1,60 @@
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-content img {
+    width: 5%;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+
+  .welcome-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .login-button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    background-color: #ccc;
+  }
+  
+  .login-button:hover {
+    background-color: #cccccc90;
+  }
+  
+  .signup-button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    background-color: #ccc;
+  }
+  
+  .signup-button:hover {
+    background-color: #cccccc90;
+  }
+
+.page-title {
+    font-size: xx-large;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }

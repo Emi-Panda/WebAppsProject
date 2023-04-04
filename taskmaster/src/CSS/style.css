@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-body{
+  padding-top: 50px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.important-tasks {
+  list-style-type: none;
+}
+
+.important-tasks a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.unimportant-tasks {
+  list-style-type: none;
+}
+
+.unimportant-tasks a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.task-list {
+  width: 2%;
+}
+

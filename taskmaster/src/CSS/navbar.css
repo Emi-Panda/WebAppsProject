@@ -1,0 +1,12 @@
+.page-nav {
+    background-color: #ccc;
+    display: flex;
+    font-size: large;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .page-nav a {
+    color: #333;
+    text-decoration: none;
+  }
