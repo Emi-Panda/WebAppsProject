@@ -16,7 +16,8 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <BrowserRouter><Routes>
+      <BrowserRouter>
+      <Routes>
           <Route exact path="/" element={<Home />}/>;
           <Route exact path="/list" element={<List />}/>;
           <Route exact path="/detail" element={<Detail />}/>;
