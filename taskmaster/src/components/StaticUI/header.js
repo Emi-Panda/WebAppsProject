@@ -12,7 +12,7 @@ export default function Header() {
                     <div className="welcome-message">Welcome, User</div>
                     <nav className="login-signup-nav">
                         <a className="login-button" href="list.html">Login</a>
-                        <a className="signup-button" href="list.html">Sign-up</a>
+                        <a className="signup-button" href="/SignIn">Sign-up</a>
                     </nav>
                 </div>
             </div>

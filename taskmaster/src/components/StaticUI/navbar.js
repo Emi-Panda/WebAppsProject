@@ -9,6 +9,7 @@ export default function Navbar() {
                 <a href="/list">My To Do List</a>
                 <a href="/detail">Details</a>
                 <a href="/create">Create New</a>
+                <a href="/signInGoogle">Sign Up</a>
             </nav>
         </div>
     );
