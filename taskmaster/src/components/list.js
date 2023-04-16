@@ -1,62 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../CSS/style.css';
-
+import { getTasks, getTask } from './DB';
 
 export default function List() {
+    const [tasks, setTasks] = useState([]);
+
+    useEffect(() => {
+        const fetchTasks = async () => {
+            const taskList = await getTasks();
+            setTasks(taskList);
+        };
+        fetchTasks();
+    }, []);
+
+    const renderTaskList = (taskCategory) => {
+        const filteredTasks = tasks.filter(task => task.category === taskCategory);
+        return (
+            <ul className={`${taskCategory}-tasks`}>
+                {filteredTasks.map(task => (
+                    <li key={task.taskID}>
+                        <div className="task-item">
+                            <a href={`detail/${task.taskID}`}>{task.taskName}</a>
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        );
+    };
+
     return (
         <div className='main-body'>
             <h1>My To Do List</h1>
 
             <h2>Urgent and Important Tasks</h2>
-            <ul class="important-tasks">
-                <li>
-                    <div class="task-item">
-                        <a href="detail.html">Task 1 name</a>
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-item">
-                        <a href="detail.html">Task 2 name</a>
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-item">
-                        <a href="detail.html">Task 3 name</a>
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-            </ul>
-            <h2>Not Urgent and Not Important Tasks</h2>
-            <ul class="unimportant-tasks">
-                <li>
-                    <div class="task-item">
-                        <a href="detail.html">Task 4 name</a>
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-item">
-                        <a href="detail.html">Task 5 name</a>
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-item">
-                        <a href="detail.html">Task 6 name</a>
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+            {renderTaskList('urgent-important')}
 
+            <h2>Not Urgent and Not Important Tasks</h2>
+            {renderTaskList('not-urgent-not-important')}
+        </div>
     );
 }
-
