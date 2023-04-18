@@ -10,7 +10,7 @@ export default function Detail() {
             <form action="list.html">
                 <div>
                     <label for="taskName">Task Name:</label>
-                    <input type="text" id="taskName" name="taskName"/>
+                    <input type="text" id="taskName" name="taskName" />
                 </div>
                 <div>
                     <label for="taskCategory">Task Category:</label>
@@ -23,7 +23,7 @@ export default function Detail() {
                 </div>
                 <div>
                     <label for="dueDate">Due Date:</label>
-                    <input type="date" id="dueDate" name="dueDate"/>
+                    <input type="date" id="dueDate" name="dueDate" />
                 </div>
                 <div>
                     <label for="status">Status:</label>
@@ -36,7 +36,7 @@ export default function Detail() {
                 </div>
                 <div>
                     <label for="location">Location:</label>
-                    <input type="text" id="location" name="location"/>
+                    <input type="text" id="location" name="location" />
                 </div>
                 <button type="submit">Submit</button>
             </form>

@@ -8,7 +8,7 @@ export default function Detail() {
         <div className='main-body'>
             <h1>View Task Detail</h1>
 
-            <img class="task-list" src={image} alt="Task Image"/>
+            <img class="task-list" src={image} alt=''/>
 
                 <div class="table-container">
                     <table>

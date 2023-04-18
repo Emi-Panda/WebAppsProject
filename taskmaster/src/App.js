@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import React from 'react';
 import "./CSS/style.css"
 
@@ -11,6 +11,15 @@ import List from "./components/list";
 import Detail from "./components/detail";
 import Create from "./components/create";
 
+import Login from "./components/Login/Login";
+import Signup from "./components/Login/Signup";
+
+import { history } from './components/Helpers/History';
+import { AuthContextProvider } from './components/Context/AuthContext';
+import ProtectedRoutes from './components/Helpers/ProtectedRoutes';
+import Preferences from "./components/UserSpecific/Preferences";
+
+
 
 
 function App() {
@@ -18,15 +27,19 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <BrowserRouter>
-        <Routes>
+      <AuthContextProvider>
+        <Routes history={history}>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/list" element={<List />} />
           <Route exact path="/detail" element={<Detail />} />
           <Route exact path="/create" element={<Create />} />
-
+          <Route path="/login" element={<Login destination="login" />} />
+          <Route path="/signup" element={<Signup destination="signup" />} />
+          <Route path="/preferences"
+            element={<ProtectedRoutes><Preferences destination="preferences" /></ProtectedRoutes>}
+          />
         </Routes>
-      </BrowserRouter>
+      </AuthContextProvider>
       <Footer />
     </div>
   );

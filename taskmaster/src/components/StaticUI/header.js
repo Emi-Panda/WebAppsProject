@@ -11,8 +11,8 @@ export default function Header() {
                 <div className="header-right">
                     <div className="welcome-message">Welcome, User</div>
                     <nav className="login-signup-nav">
-                        <a className="login-button" href="list.html">Login</a>
-                        <a className="signup-button" href="/SignIn">Sign-up</a>
+                        <a href="/login" className="login-button">Login</a>
+                        <a className="login-button" href="/preferences">Account</a>
                     </nav>
                 </div>
             </div>
