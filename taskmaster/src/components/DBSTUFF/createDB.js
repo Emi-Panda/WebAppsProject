@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import '../CSS/style.css';
+import '../../CSS/style.css';
 
 
 const Record = (props) => (
@@ -10,7 +10,7 @@ const Record = (props) => (
         <td>{props.record.category}</td>
         <td>{props.record.date}</td>
         <td>
-            <Link className="btn btn-link" to={`/detail`}>details</Link> |
+            <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link> |
             <button className="btn btn-link"
                 onClick={() => {
                     props.deleteRecord(props.record._id);
@@ -21,8 +21,9 @@ const Record = (props) => (
         </td>
     </tr>
 );
-export default function List() {
-  const [records, setRecords] = useState([]);
+
+export default function RecordList() {
+    const [records, setRecords] = useState([]);
 
     // This method fetches the records from the database.
     useEffect(() => {
@@ -69,9 +70,9 @@ export default function List() {
 
     // This following section will display the table with the records of individuals.
     return (
-        <div className="tasklist-container">
-            <h3 className="tasklist-heading">Tasks</h3>
-            <table className="tasklist">
+        <div>
+            <h3>Record List</h3>
+            <table className="table table-striped" style={{ marginTop: 20 }}>
                 <thead>
                     <tr>
                         <th>task</th>

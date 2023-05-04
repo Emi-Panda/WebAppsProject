@@ -45,7 +45,34 @@ a:focus {
 
 }
 
-.task-list {
-  width: 2%;
+.tasklist-container {
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.tasklist-heading {
+  text-align: center;
 }
 
+.tasklist {
+  width: 2%;
+}
+.tasklist {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.tasklist th, .tasklist td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.tasklist th {
+  background-color: #f2f2f2;
+}
+
+.tasklist tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

@@ -19,6 +19,9 @@ import { AuthContextProvider } from './components/Context/AuthContext';
 import ProtectedRoutes from './components/Helpers/ProtectedRoutes';
 import Preferences from "./components/UserSpecific/Preferences";
 
+import CreateDB from './components/DBSTUFF/createDB';
+
+
 
 
 
@@ -29,6 +32,7 @@ function App() {
       <Navbar />
       <AuthContextProvider>
         <Routes history={history}>
+          <Route exact path="/init" element={<CreateDB />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/list" element={<List />} />
           <Route exact path="/detail" element={<Detail />} />

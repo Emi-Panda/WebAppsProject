@@ -1,0 +1,42 @@
+use taskmater
+db.createCollection("tasks")
+
+db.tasks.insert({
+   task: "Do Homework",
+   description: "Webapps milestone 3",
+   urgency: "urgent-important",
+   date: "5/4/2023"
+})
+db.tasks.insert({
+   task: "Clean apartment",
+   description: "Task 2 description",
+   urgency: "urgent-important",
+   date: "5/4/2023"
+})
+db.tasks.insert({
+   task: "Haircut appointment",
+   description: "Get haircut",
+   urgency: "urgent-important",
+   date: "5/5/2023"
+})
+db.tasks.insert({
+   task: "Buy cat food",
+   description: "Purena",
+   urgency: "not-urgent-not-important",
+   date: "5/5/2023"
+})
+db.tasks.insert({
+   task: "download ecplise",
+   description: "Download eclipse for personal project",
+   urgency: "not-urgent-not-important",
+   date: "5/5/2023"
+})
+db.tasks.insert({
+   task: "install VS code",
+   description: "Download VScode for coding",
+   urgency: "not-urgent-not-important",
+   date: "5/5/2023"
+})
+
+
+
