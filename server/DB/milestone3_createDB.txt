@@ -21,7 +21,7 @@ db.tasks.insert({
 })
 db.tasks.insert({
    task: "Buy cat food",
-   description: "Purena",
+   description: "meow mix",
    urgency: "not-urgent-not-important",
    date: "5/5/2023"
 })
